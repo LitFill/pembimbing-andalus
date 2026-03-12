@@ -14,7 +14,7 @@
 
 ## Phase 2: Documentation Enhancement
 
-- [ ] **Task: Update `README.md` and `README.id.md`**
+- [x] **Task: Update `README.md` and `README.id.md`** [ff6d370]
     - [ ] Add a "Deployment" section with specific instructions for GitHub Pages.
     - [ ] Add an "Architecture" section providing an overview of the single-page application structure.
     - [ ] Enhance "Usage" guidelines to provide a more intuitive starting point for new users.
