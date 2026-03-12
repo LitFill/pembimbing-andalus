@@ -12,3 +12,6 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 - [ ] **Track: Dynamic Numbering**
       _Link: [./tracks/dynamic_numbering_20260313/](./tracks/dynamic_numbering_20260313/)_
+
+- [ ] **Track: Fix White Group Header**
+      _Link: [./tracks/fix_white_header_20260313/](./tracks/fix_white_header_20260313/)_
