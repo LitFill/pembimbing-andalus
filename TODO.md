@@ -1,6 +1,7 @@
 # Project Roadmap: Pembimbing Andalus
 
 ## Phase 1: Core Functionality & UI (Completed)
+
 - [x] **Documentation**: Initial README with features and usage.
 - [x] **Bug Fixes**: Attribute injection fix in `src/index.js`.
 - [x] **Search & Filter**: Live filtering by name or role.
@@ -11,12 +12,14 @@
 - [x] **Grouping & Accordion**: Categorized view with collapsible headers.
 
 ## Phase 2: Code Quality & Maintenance (In Progress)
+
 - [x] **Conductor Setup**: Implemented Conductor spec-driven development framework.
 - [x] **Code Audit & Cleanup**: Refactored `src/index.js` and `src/index.css` for style guide compliance and modularity.
 - [x] **Enhanced Documentation**: Detailed Architecture, Deployment, and Usage sections in README (English & Indonesian).
 - [ ] **Track Completion**: Finalize the current cleanup and documentation track.
 
 ## Phase 3: Advanced Features & Optimization (Future)
+
 - [ ] **Dark Mode Support**: Add a theme switcher for better accessibility.
 - [ ] **Export Options**: Allow users to export the list to PDF or Excel.
 - [ ] **Advanced Filtering**: Filter by specific room categories or floors.
@@ -25,5 +28,6 @@
 - [ ] **PWA Support**: Make the application installable as a Progressive Web App.
 
 ## Phase 4: Data Management (Future)
+
 - [ ] **External Data Source**: Fetch supervisor data from a JSON file or a simple API.
 - [ ] **Admin Dashboard**: A secure way to update the supervisor list without editing HTML.
