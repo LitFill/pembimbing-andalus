@@ -123,13 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // 1. Initialize Data & DOM Elements from SUPERVISORS
-  SUPERVISORS.forEach((item) => {
+  SUPERVISORS.forEach((item, index) => {
+    const itemNo = index + 1;
+    
     // Create Table Row
     const row = document.createElement('tr');
     
     const cellNo = document.createElement('td');
     cellNo.className = 'col-no';
-    cellNo.textContent = item.no;
+    cellNo.textContent = itemNo;
     
     const cellTask = document.createElement('td');
     cellTask.className = 'col-jabatan';
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = 'pembimbing-card';
     card.innerHTML = `
       <div class="card-header">
-        <span class="card-no">#${item.no}</span>
+        <span class="card-no">#${itemNo}</span>
       </div>
       <div class="card-content">
         <h3>Tugas / Kamar</h3>
@@ -167,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     dataItems.push({
-      no: item.no,
+      no: itemNo,
       task: item.task,
       name: item.name,
       row,
