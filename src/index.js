@@ -14,9 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!tbody) return;
 
+  // Check if SUPERVISORS data is loaded
+  if (typeof SUPERVISORS === 'undefined') {
+    console.error('SUPERVISORS data not found. Please check src/data.js');
+    return;
+  }
+
   /** @type {Array<Object>} */
   const dataItems = [];
-  const originalRows = Array.from(tbody.querySelectorAll('tr'));
 
   /**
    * Creates a wrapper element with text and a copy button.
@@ -117,36 +122,44 @@ document.addEventListener('DOMContentLoaded', () => {
     activeContainer.appendChild(noResultMsg);
   };
 
-  // 1. Initialize Data & Card Elements
-  originalRows.forEach((row) => {
-    const cells = row.querySelectorAll('td');
-    const no = cells[0].innerText;
-    const task = cells[1].innerText.trim();
-    const name = cells[2].innerText.trim();
-
-    // Update Table with Copy Wrapper
-    cells[1].innerHTML = '';
-    cells[1].appendChild(createCellWrapper(task));
-    cells[2].innerHTML = '';
-    cells[2].appendChild(createCellWrapper(name));
+  // 1. Initialize Data & DOM Elements from SUPERVISORS
+  SUPERVISORS.forEach((item) => {
+    // Create Table Row
+    const row = document.createElement('tr');
+    
+    const cellNo = document.createElement('td');
+    cellNo.className = 'col-no';
+    cellNo.textContent = item.no;
+    
+    const cellTask = document.createElement('td');
+    cellTask.className = 'col-jabatan';
+    cellTask.appendChild(createCellWrapper(item.task));
+    
+    const cellName = document.createElement('td');
+    cellName.className = 'col-nama';
+    cellName.appendChild(createCellWrapper(item.name));
+    
+    row.appendChild(cellNo);
+    row.appendChild(cellTask);
+    row.appendChild(cellName);
 
     // Create Card Element
     const card = document.createElement('div');
     card.className = 'pembimbing-card';
     card.innerHTML = `
       <div class="card-header">
-        <span class="card-no">#${no}</span>
+        <span class="card-no">#${item.no}</span>
       </div>
       <div class="card-content">
         <h3>Tugas / Kamar</h3>
-        <p>${task}</p>
+        <p>${item.task}</p>
       </div>
       <div class="card-footer">
         <div>
           <span class="label">Nama Pembimbing</span>
           <div class="cell-wrapper">
-            <span class="text-content" style="font-weight:600">${name}</span>
-            <button class="btn-copy" data-copy="${name}" 
+            <span class="text-content" style="font-weight:600">${item.name}</span>
+            <button class="btn-copy" data-copy="${item.name}" 
                     title="Salin Nama">📄 Salin</button>
           </div>
         </div>
@@ -154,13 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     dataItems.push({
-      no,
-      task,
-      name,
+      no: item.no,
+      task: item.task,
+      name: item.name,
       row,
       card,
-      searchText: `${task} ${name}`.toLowerCase(),
-      category: getCategory(task),
+      searchText: `${item.task} ${item.name}`.toLowerCase(),
+      category: getCategory(item.task),
     });
   });
 
