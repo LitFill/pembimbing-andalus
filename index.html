@@ -1,47 +1,44 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Daftar Pembimbing Kamar</title>
-    <link href="src/index.css" rel="stylesheet" />
-  </head>
 
-  <body>
-    <div class="container">
-      <h2>Daftar Pembimbing Kamar</h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daftar Pembimbing Kamar</title>
+  <link href="src/index.css" rel="stylesheet" />
+</head>
 
-      <!-- Dashboard Statistik -->
-      <div id="statsDashboard" class="stats-container">
-        <div class="stat-card">
-          <span class="stat-value" id="totalPembimbing">0</span>
-          <span class="stat-label">Total Pembimbing</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-value" id="totalKamar">0</span>
-          <span class="stat-label">Total Kamar</span>
-        </div>
+<body>
+  <div class="container">
+    <h2>Daftar Pembimbing Kamar</h2>
+
+    <!-- Dashboard Statistik -->
+    <div id="statsDashboard" class="stats-container">
+      <div class="stat-card">
+        <span class="stat-value" id="totalPembimbing">0</span>
+        <span class="stat-label">Total Pembimbing</span>
       </div>
-
-      <div class="search-container">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Cari nama pembimbing atau nama kamar..."
-          aria-label="Cari pembimbing"
-        />
-        <button id="viewToggle" class="btn-toggle" title="Ganti Tampilan">
-          🗂️ Mode Kartu
-        </button>
-        <select id="groupSelect" class="group-select" aria-label="Kelompokkan Data">
-          <option value="none">Tanpa Pengelompokan</option>
-          <option value="category">Kategori Kamar</option>
-        </select>
+      <div class="stat-card">
+        <span class="stat-value" id="totalKamar">0</span>
+        <span class="stat-label">Total Kamar</span>
       </div>
+    </div>
 
-      <div id="tableView" class="view-section active">
-        <div class="table-responsive">
-          <table id="dataTable">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Cari nama pembimbing atau nama kamar..."
+        aria-label="Cari pembimbing" />
+      <button id="viewToggle" class="btn-toggle" title="Ganti Tampilan">
+        🗂️ Mode Kartu
+      </button>
+      <select id="groupSelect" class="group-select" aria-label="Kelompokkan Data">
+        <option value="none">Tanpa Pengelompokan</option>
+        <option value="category">Kategori Kamar</option>
+      </select>
+    </div>
+
+    <div id="tableView" class="view-section active">
+      <div class="table-responsive">
+        <table id="dataTable">
           <thead>
             <tr>
               <th class="col-no" scope="col">No</th>
@@ -265,5 +262,6 @@
     </div>
 
     <script src="src/index.js"></script>
-  </body>
+</body>
+
 </html>
