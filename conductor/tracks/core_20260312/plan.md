@@ -6,7 +6,7 @@
     - [ ] Identify and remove redundant code blocks.
     - [ ] Refactor variables and functions to ensure consistent naming conventions as per the JavaScript style guide.
     - [ ] Improve code modularity and readability through better documentation (JSDoc).
-- [ ] **Task: Audit and clean up `src/index.css`**
+- [x] **Task: Audit and clean up `src/index.css`** [3e9af06]
     - [ ] Organize CSS rules by component and functionality.
     - [ ] Consolidate custom properties (CSS variables) for flexible theme management.
     - [ ] Ensure all styles follow the project's CSS style guidelines.
