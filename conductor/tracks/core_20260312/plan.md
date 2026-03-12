@@ -12,7 +12,7 @@
     - [ ] Ensure all styles follow the project's CSS style guidelines.
 - [x] **Task: Conductor - User Manual Verification 'Phase 1: Code Audit and Cleanup' (Protocol in workflow.md)** [3929630]
 
-## Phase 2: Documentation Enhancement
+## Phase 2: Documentation Enhancement [checkpoint: 35875bd]
 
 - [x] **Task: Update `README.md` and `README.id.md`** [ff6d370]
     - [ ] Add a "Deployment" section with specific instructions for GitHub Pages.
@@ -21,4 +21,4 @@
 - [x] **Task: Update `TODO.md`** [a2f919d]
     - [ ] Reflect the current project status after the Conductor setup and cleanup.
     - [ ] Define high-level milestones for future feature development.
-- [ ] **Task: Conductor - User Manual Verification 'Phase 2: Documentation Enhancement' (Protocol in workflow.md)**
+- [x] **Task: Conductor - User Manual Verification 'Phase 2: Documentation Enhancement' (Protocol in workflow.md)** [35875bd]
