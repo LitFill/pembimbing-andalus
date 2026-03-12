@@ -1,38 +1,29 @@
-# Project Tasks: Pembimbing Andalus
+# Project Roadmap: Pembimbing Andalus
 
-## 1. Documentation
-- [x] **Update README.md**: Add project description, features, and usage instructions.
+## Phase 1: Core Functionality & UI (Completed)
+- [x] **Documentation**: Initial README with features and usage.
+- [x] **Bug Fixes**: Attribute injection fix in `src/index.js`.
+- [x] **Search & Filter**: Live filtering by name or role.
+- [x] **Responsive Table**: Mobile-friendly data display.
+- [x] **Card View**: Grid-based visual layout optimized for mobile.
+- [x] **View Toggle**: Switch between Table and Card modes.
+- [x] **Dashboard Summary**: Real-time stats for supervisors and rooms.
+- [x] **Grouping & Accordion**: Categorized view with collapsible headers.
 
-## 2. Bug Fixes & Security
-- [x] **Fix Attribute Injection in `src/index.js`**: Ensure that names or roles containing quotes (`"`) do not break the HTML attribute when injecting the copy button.
-    - *Step:* Instead of template literals for `data-copy`, use `element.dataset.copy` or `setAttribute`.
+## Phase 2: Code Quality & Maintenance (In Progress)
+- [x] **Conductor Setup**: Implemented Conductor spec-driven development framework.
+- [x] **Code Audit & Cleanup**: Refactored `src/index.js` and `src/index.css` for style guide compliance and modularity.
+- [x] **Enhanced Documentation**: Detailed Architecture, Deployment, and Usage sections in README (English & Indonesian).
+- [ ] **Track Completion**: Finalize the current cleanup and documentation track.
 
-## 3. New Features
-- [x] **Implement Search/Filter**:
-    - [x] **HTML**: Add a search input field above the table in `index.html`.
-    - [x] **CSS**: Style the search input for better UX in `src/index.css`.
-    - [x] **JS**: Add an event listener to the search input in `src/index.js` to filter table rows based on user input (searching by name or role).
+## Phase 3: Advanced Features & Optimization (Future)
+- [ ] **Dark Mode Support**: Add a theme switcher for better accessibility.
+- [ ] **Export Options**: Allow users to export the list to PDF or Excel.
+- [ ] **Advanced Filtering**: Filter by specific room categories or floors.
+- [ ] **Unit Testing**: Implement automated tests using a lightweight framework (e.g., assert or a small test runner).
+- [ ] **Performance Optimization**: Further minify assets and optimize image/icon loading.
+- [ ] **PWA Support**: Make the application installable as a Progressive Web App.
 
-## 4. Final Review
-- [x] Verify all features work as expected.
-- [x] Ensure responsiveness is maintained.
-
-## 5. Mode Presentasi Baru (Card Mode)
-- [x] **View Toggler**:
-    - [x] **HTML**: Tambahkan tombol untuk beralih antara "Tampilan Tabel" dan "Tampilan Kartu".
-    - [x] **CSS**: Berikan gaya pada tombol pemindah mode agar terlihat modern.
-    - [x] **JS**: Implementasikan logika perpindahan *state* (Tabel/Kartu).
-- [x] **Card View**:
-    - [x] **HTML**: Tambahkan kontainer kosong untuk menampung kartu-kartu yang akan di-generate via JS.
-    - [x] **CSS**: Desain tampilan kartu yang responsif (Grid/Flexbox).
-    - [x] **JS**: Buat fungsi untuk meng-generate kartu secara dinamis dari data tabel agar data tetap sinkron.
-    - [x] **JS**: Pastikan fitur pencarian juga menyaring tampilan kartu.
-
-## 6. Mode Presentasi Tambahan
-- [x] **Dashboard Ringkasan (Stats Overview)**:
-    - [x] **HTML**: Tambahkan area di atas pencarian untuk menampilkan statistik ringkas.
-    - [x] **JS**: Hitung total pembimbing dan kategori unik (kamar) secara dinamis.
-- [x] **Pengelompokan & Akordion (Grouped View)**:
-    - [x] **HTML/JS**: Tambahkan opsi dropdown/tombol untuk mengaktifkan "Mode Grup".
-    - [x] **JS**: Logika untuk mengelompokkan data berdasarkan kata kunci (misal: "Lantai", "Bahasa", "Tahfidz").
-    - [x] **CSS**: Styling untuk header grup dan animasi *collapse/expand* (akordion).
+## Phase 4: Data Management (Future)
+- [ ] **External Data Source**: Fetch supervisor data from a JSON file or a simple API.
+- [ ] **Admin Dashboard**: A secure way to update the supervisor list without editing HTML.
