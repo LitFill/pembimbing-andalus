@@ -18,7 +18,7 @@
     - [ ] Add a "Deployment" section with specific instructions for GitHub Pages.
     - [ ] Add an "Architecture" section providing an overview of the single-page application structure.
     - [ ] Enhance "Usage" guidelines to provide a more intuitive starting point for new users.
-- [ ] **Task: Update `TODO.md`**
+- [x] **Task: Update `TODO.md`** [a2f919d]
     - [ ] Reflect the current project status after the Conductor setup and cleanup.
     - [ ] Define high-level milestones for future feature development.
 - [ ] **Task: Conductor - User Manual Verification 'Phase 2: Documentation Enhancement' (Protocol in workflow.md)**
