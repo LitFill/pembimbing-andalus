@@ -1,64 +1,119 @@
 <!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daftar Pembimbing Kamar</title>
+    <link href="src/index.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daftar Pembimbing Kamar</title>
-  <link href="src/index.css" rel="stylesheet" />
-</head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="page-title">Daftar Pembimbing Kamar</h1>
+        <div class="stats-summary">
+          <span id="totalPembimbing">0</span> Pembimbing
+          <span id="totalKamar">0</span> Kamar
+        </div>
+      </header>
 
-<body>
-  <div class="container">
-    <h2>Daftar Pembimbing Kamar</h2>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Cari nama pembimbing atau nama kamar..."
+          aria-label="Cari pembimbing"
+        />
 
-    <!-- Dashboard Statistik -->
-    <div id="statsDashboard" class="stats-container">
-      <div class="stat-card">
-        <span class="stat-value" id="totalPembimbing">0</span>
-        <span class="stat-label">Total Pembimbing</span>
+        <div
+          class="view-switcher"
+          role="radiogroup"
+          aria-label="Pilih Tampilan"
+        >
+          <button
+            id="showTable"
+            class="view-btn active"
+            aria-checked="true"
+            role="radio"
+          >
+            <svg
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="square"
+              stroke-linejoin="arcs"
+            >
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Tabel</span>
+          </button>
+          <button
+            id="showCard"
+            class="view-btn"
+            aria-checked="false"
+            role="radio"
+          >
+            <svg
+              aria-hidden="true"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="square"
+              stroke-linejoin="arcs"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Kartu</span>
+          </button>
+        </div>
+
+        <select
+          id="groupSelect"
+          class="group-select"
+          aria-label="Kelompokkan Data"
+        >
+          <option value="none">Tanpa Pengelompokan</option>
+          <option value="category">Kategori Kamar</option>
+        </select>
       </div>
-      <div class="stat-card">
-        <span class="stat-value" id="totalKamar">0</span>
-        <span class="stat-label">Total Kamar</span>
+
+      <div id="tableView" class="view-section active">
+        <div class="table-responsive">
+          <table id="dataTable">
+            <thead>
+              <tr>
+                <th class="col-jabatan" scope="col">Tugas / Kamar</th>
+                <th class="col-nama" scope="col">Nama Pembimbing</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data HTML -->
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
 
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Cari nama pembimbing atau nama kamar..."
-        aria-label="Cari pembimbing" />
-      <button id="viewToggle" class="btn-toggle" title="Ganti Tampilan">
-        🗂️ Mode Kartu
-      </button>
-      <select id="groupSelect" class="group-select" aria-label="Kelompokkan Data">
-        <option value="none">Tanpa Pengelompokan</option>
-        <option value="category">Kategori Kamar</option>
-      </select>
-    </div>
-
-    <div id="tableView" class="view-section active">
-      <div class="table-responsive">
-        <table id="dataTable">
-          <thead>
-            <tr>
-              <th class="col-no" scope="col">No</th>
-              <th class="col-jabatan" scope="col">Tugas / Kamar</th>
-              <th class="col-nama" scope="col">Nama Pembimbing</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Data HTML -->
-          </tbody>
-        </table>
+      <div id="cardView" class="view-section">
+        <div id="cardContainer" class="card-grid"></div>
       </div>
+
+      <script src="src/data.js"></script>
+      <script src="src/index.js"></script>
     </div>
-
-    <div id="cardView" class="view-section">
-      <div id="cardContainer" class="card-grid"></div>
-    </div>
-
-    <script src="src/data.js"></script>
-    <script src="src/index.js"></script>
-</body>
-
+  </body>
 </html>
